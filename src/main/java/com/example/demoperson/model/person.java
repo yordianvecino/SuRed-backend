@@ -17,10 +17,19 @@ public class person {
 	private String name;
 	
 	@Column
+	private String appeals;
+	
+	@Column
 	private String phone;
 	
 	@Column
 	private String email;
+	
+	@Column
+	private String city;
+	
+	@Column
+	private String country;
 
 	public Long getId_person() {
 		return id_person;
@@ -37,6 +46,14 @@ public class person {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public String getAppeals() {
+		return appeals;
+	}
+
+	public void setAppeals(String appeals) {
+		this.appeals = appeals;
+	}
 
 	public String getPhone() {
 		return phone;
@@ -52,5 +69,21 @@ public class person {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 }

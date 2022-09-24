@@ -18,8 +18,7 @@ public abstract class GenericServiceImpl<T, ID extends Serializable> implements 
 
 	@Override
 	public void delete(ID id_person) {
-		getDao().deleteById(id_person);
-		
+		getDao().deleteById(id_person);	
 	}
 
 	@Override

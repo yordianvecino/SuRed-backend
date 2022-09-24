@@ -23,24 +23,26 @@ public class PersonRestController {
 	@Autowired
 	private personServiceAPI personServiceAPI;
 	
-	@CrossOrigin(origins = "http://localhost:8082")
-	
+	@CrossOrigin(origins = "http://localhost:8081")
 	@GetMapping(value = "/all")
 	public List<person> getAll(){
 		return personServiceAPI.getAll();
 	}
 	
+	@CrossOrigin(origins = "http://localhost:8081")
 	@GetMapping(value = "/find/{id_person}")
 	public person fing(@PathVariable Long id_person) {
 		return personServiceAPI.get(id_person);
 	}
 	
+	@CrossOrigin(origins = "http://localhost:8081")
 	@PostMapping(value = "/save")
 	public ResponseEntity<person> save(@RequestBody person Person){
 		person obj = personServiceAPI.save(Person);
 		return new ResponseEntity<person>(obj, HttpStatus.OK);
 	}
 	
+	@CrossOrigin(origins = "http://localhost:8081")
 	@GetMapping(value = "/delete/{id_person}")
 	public ResponseEntity<person> delete(@RequestBody Long id_person){
 		person Person = personServiceAPI.get(id_person);
